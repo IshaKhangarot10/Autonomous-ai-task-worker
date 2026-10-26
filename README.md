@@ -4,16 +4,9 @@ An autonomous, full-stack AI task worker built for the CentrAlign internship ass
 
 ---
 
-## 3-Sentence Summary
+## Summary
 
 CentrAlign Autonomous Task Worker is an agentic automation system designed to execute end-to-end office and finance workflows autonomously in real software environments. Rather than relying on brittle, pre-scripted CSS selectors or task-specific workflows, the worker discovers form fields dynamically through accessible DOM snapshots, enforces human-in-the-loop approvals for mutating operations in code, and autonomously adapts to environmental disruptions such as session expiries, delayed loads, renamed fields, popups, and transient server errors. Every task completes with an independent, fresh-context verification audit that inspects real system state before claiming success.
-
----
-
-## Demo Video
-
-[![CentrAlign Demo Video Placeholder](https://img.shields.io/badge/Demo_Video-Watch_Walkthrough-blue?style=for-the-badge&logo=youtube)](https://example.com/demo-video)  
-*(Placeholder: In a live submission, link your Loom, YouTube, or Google Drive screen recording here).*
 
 ---
 
