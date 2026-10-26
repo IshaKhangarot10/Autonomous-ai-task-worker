@@ -1,0 +1,25 @@
+Acme Supplies Inc.
+12 Commerce St, Dallas TX
+
+INVOICE
+
+Bill To:
+  Acme Corp - Procurement
+  Attn: Finance Department
+
+Invoice No.:   AS-Q3-2024-044
+Invoice Date:  September 28, 2024
+Payment Due:   October 28, 2024
+
+Items:
+  Office supplies - September order        $1,850.00
+  Printer cartridges (bulk)                   $975.00
+  Ergonomic keyboard (x5)                     $925.00
+
+                              Subtotal:    $3,750.00
+                              Tax (0%):        $0.00
+                              ─────────────────────
+                              TOTAL:       $3,750.00
+
+Payment: USD
+Wire to: accounts@acmesupplies.example

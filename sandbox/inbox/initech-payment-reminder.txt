@@ -1,0 +1,21 @@
+PAYMENT REMINDER
+
+From: Initech Accounts Payable <ap@initech.example>
+Date: October 10, 2024
+
+Dear Finance Team,
+
+This is a reminder regarding the following outstanding invoice:
+
+  Invoice Number:  INV-2041
+  Amount:          ₹42,000.00
+  Currency:        INR
+  Original Date:   September 1, 2024
+  Due Date:        October 1, 2024   ** OVERDUE **
+
+Please process this payment at your earliest convenience.
+If already paid, kindly disregard this notice.
+
+Regards,
+Accounts Payable
+Initech

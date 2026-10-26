@@ -1,0 +1,25 @@
+Globex Corporation
+123 Innovation Drive
+Springfield
+
+                              INVOICE
+
+To: Acme Corp
+    Finance Department
+
+Invoice No:  GLX-2024-0112
+Date:        October 20, 2024
+Due:         November 20, 2024
+
+──────────────────────────────────────────────
+  Enterprise platform license (Q4)     $14,800.00
+  Implementation support                $2,500.00
+  Training sessions (x2)                $1,000.00
+──────────────────────────────────────────────
+
+                        Total:  USD 18,300.00
+
+Terms: Net 30 days
+Contact: billing@globex.example
+
+Note: This invoice supersedes any previous drafts.

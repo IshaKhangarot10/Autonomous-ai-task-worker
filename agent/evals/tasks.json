@@ -1,0 +1,130 @@
+[
+  {
+    "id": "task_1",
+    "name": "Task 1: Latest Globex Invoice",
+    "description": "Must inspect dates inside documents (Oct 20 vs Sept 15), enter latest invoice GLX-2024-0112 into portal.",
+    "goal": "Find the latest invoice from Globex, extract the amount and due date, enter it into the finance portal, and tell me once it is done.",
+    "chaos": "none",
+    "expected": {
+      "type": "invoice",
+      "vendor": "Globex Corporation",
+      "invoiceNumber": "GLX-2024-0112",
+      "amount": 4850.00,
+      "currency": "USD",
+      "dueDate": "2024-11-20"
+    }
+  },
+  {
+    "id": "task_2",
+    "name": "Task 2: Initech Indian Number Normalization",
+    "description": "Must normalize Indian numbering 'Rs. 1,24,500.00' to numeric 124500.00 and currency INR.",
+    "goal": "Enter the Initech invoice from the inbox into the portal.",
+    "chaos": "none",
+    "expected": {
+      "type": "invoice",
+      "vendor": "Initech",
+      "invoiceNumber": "INV-2047",
+      "amount": 124500.00,
+      "currency": "INR",
+      "dueDate": "2024-11-05"
+    }
+  },
+  {
+    "id": "task_3",
+    "name": "Task 3: Duplicate Invoice Detection",
+    "description": "Must detect that INV-2041 already exists in the portal and report it without creating a duplicate record.",
+    "goal": "Log the invoice in the inbox with number INV-2041.",
+    "chaos": "none",
+    "expected": {
+      "type": "duplicate",
+      "invoiceNumber": "INV-2041",
+      "mustNotDuplicate": true
+    }
+  },
+  {
+    "id": "task_4",
+    "name": "Task 4: Update Vendor Billing Email",
+    "description": "Must locate vendor Initech in vendor records and update its billing email.",
+    "goal": "Update Initech's billing email to accounts@initech.example in the vendor records.",
+    "chaos": "none",
+    "expected": {
+      "type": "vendor_update",
+      "vendor": "Initech",
+      "billingEmail": "accounts@initech.example"
+    }
+  },
+  {
+    "id": "task_5",
+    "name": "Task 5: Vendor Ambiguity Resolution",
+    "description": "Must identify ambiguity between Acme Supplies and Acme Industries, and ask supervisor before proceeding.",
+    "goal": "Enter the Acme invoice.",
+    "chaos": "none",
+    "scriptedHumanAnswer": "Acme Supplies Inc.",
+    "expected": {
+      "type": "invoice",
+      "vendor": "Acme Supplies",
+      "invoiceNumber": "AS-Q3-2024-044",
+      "mustAskHuman": true
+    }
+  },
+  {
+    "id": "task_6_flaky",
+    "name": "Task 6a: Chaos — Flaky Submit",
+    "description": "First form submission fails with 500 server error; agent must adapt and retry without creating duplicates.",
+    "goal": "Find the latest invoice from Globex, extract the amount and due date, enter it into the finance portal, and tell me once it is done.",
+    "chaos": "flaky_submit",
+    "expected": {
+      "type": "invoice",
+      "vendor": "Globex Corporation",
+      "invoiceNumber": "GLX-2024-0112"
+    }
+  },
+  {
+    "id": "task_6_slow",
+    "name": "Task 6b: Chaos — Slow Load",
+    "description": "Portal form render is delayed by 3-5 seconds; agent waits for loading indicator to settle.",
+    "goal": "Find the latest invoice from Globex, extract the amount and due date, enter it into the finance portal, and tell me once it is done.",
+    "chaos": "slow_load",
+    "expected": {
+      "type": "invoice",
+      "vendor": "Globex Corporation",
+      "invoiceNumber": "GLX-2024-0112"
+    }
+  },
+  {
+    "id": "task_6_renamed",
+    "name": "Task 6c: Chaos — Renamed Fields",
+    "description": "Form fields are renamed to Supplier, Reference No., Payment Due By; agent matches fields semantically.",
+    "goal": "Find the latest invoice from Globex, extract the amount and due date, enter it into the finance portal, and tell me once it is done.",
+    "chaos": "renamed_fields",
+    "expected": {
+      "type": "invoice",
+      "vendor": "Globex Corporation",
+      "invoiceNumber": "GLX-2024-0112"
+    }
+  },
+  {
+    "id": "task_6_popup",
+    "name": "Task 6d: Chaos — Popup Modal",
+    "description": "A 'What's New' modal covers the invoice form; agent identifies the dismiss button and closes it.",
+    "goal": "Find the latest invoice from Globex, extract the amount and due date, enter it into the finance portal, and tell me once it is done.",
+    "chaos": "popup",
+    "expected": {
+      "type": "invoice",
+      "vendor": "Globex Corporation",
+      "invoiceNumber": "GLX-2024-0112"
+    }
+  },
+  {
+    "id": "task_6_session",
+    "name": "Task 6e: Chaos — Session Expiry",
+    "description": "Session expires mid-task redirecting to /login; agent re-authenticates and resumes.",
+    "goal": "Find the latest invoice from Globex, extract the amount and due date, enter it into the finance portal, and tell me once it is done.",
+    "chaos": "session_expiry",
+    "expected": {
+      "type": "invoice",
+      "vendor": "Globex Corporation",
+      "invoiceNumber": "GLX-2024-0112"
+    }
+  }
+]

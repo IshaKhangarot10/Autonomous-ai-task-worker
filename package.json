@@ -1,0 +1,30 @@
+{
+  "name": "centralign-agent",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "seed": "node portal/scripts/seed.js",
+    "reset": "node portal/scripts/reset.js",
+    "make-pdfs": "node sandbox/scripts/make-pdfs.js",
+    "portal": "node portal/server.js",
+    "agent": "node agent/src/server.js",
+    "cli": "node agent/cli.js",
+    "evals": "node agent/evals/run-evals.js",
+    "dashboard": "cd dashboard && npm run dev"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@google/genai": "^2.31.0",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "express-session": "^1.19.0",
+    "mongoose": "^9.11.4",
+    "pdf-parse": "^2.4.5",
+    "pdfkit": "^0.20.2",
+    "playwright": "^1.64.1",
+    "uuid": "^14.0.3",
+    "zod": "^4.6.7"
+  }
+}

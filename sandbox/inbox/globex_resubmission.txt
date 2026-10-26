@@ -1,0 +1,23 @@
+INVOICE
+
+From: Globex Corporation
+      123 Innovation Drive, Springfield
+
+Bill To: Acme Corp - Finance Department
+
+Invoice Number: GLX-2024-0098
+Invoice Date:   September 15, 2024
+Due Date:       October 15, 2024
+
+Description                          Amount (USD)
+─────────────────────────────────────────────────
+Strategy consulting - Phase 2          $8,500.00
+Market research report                 $2,750.00
+Travel & expenses                      $1,250.00
+─────────────────────────────────────────────────
+TOTAL                                 $12,500.00
+
+Payment Terms: Net 30
+Please remit payment to: billing@globex.example
+
+Thank you for your business!

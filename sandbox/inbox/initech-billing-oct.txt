@@ -1,0 +1,28 @@
+Initech
+4120 Freidrich Lane, Austin TX
+
+TAX INVOICE
+
+Invoice #:  INV-2047
+Date:       October 5, 2024
+Due Date:   November 5, 2024
+
+To: Acme Corp, Finance Dept.
+
+Particulars:
+  Annual software maintenance contract     Rs. 85,000.00
+  Custom module development                Rs. 32,500.00
+  Data migration services                  Rs.  7,000.00
+
+                                    ─────────────────────
+  Grand Total:                       Rs. 1,24,500.00
+                                    ─────────────────────
+
+Currency: INR
+GSTIN: 07AABCI1234F1Z5
+
+Payment to: ap@initech.example
+Bank: HDFC Bank, A/C 50100123456789
+IFSC: HDFC0001234
+
+This is a computer-generated invoice.

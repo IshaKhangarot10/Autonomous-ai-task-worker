@@ -1,0 +1,9 @@
+node_modules/
+.next/
+dashboard/.next/
+.env
+.env.local
+.env.*.local
+sandbox/artifacts/
+*.log
+.DS_Store
