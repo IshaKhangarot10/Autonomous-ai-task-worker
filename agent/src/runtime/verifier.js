@@ -189,15 +189,14 @@ export async function programmaticVerify({ goal = '', claimedOutcome = {}, conte
       }
 
       // Check 4: Currency
-      if (expectedCurrency) {
-        const currMatches = invoice.currency?.toUpperCase() === expectedCurrency.toUpperCase();
-        checks.push({
-          what: 'Currency',
-          expected: expectedCurrency.toUpperCase(),
-          actual: invoice.currency,
-          pass: currMatches
-        });
-      }
+      const targetCurrency = expectedCurrency || context.state?.memory?.currency || invoice.currency || 'USD';
+      const currMatches = invoice.currency?.toUpperCase() === targetCurrency.toUpperCase();
+      checks.push({
+        what: 'Currency',
+        expected: targetCurrency.toUpperCase(),
+        actual: invoice.currency,
+        pass: currMatches
+      });
 
       // Check 5: Due Date
       if (expectedDueDate) {
@@ -211,6 +210,16 @@ export async function programmaticVerify({ goal = '', claimedOutcome = {}, conte
           pass: dueMatches
         });
       }
+
+      // Check 6: Invoice Status
+      const expectedStatus = claimedOutcome.status || 'logged';
+      const statusMatches = Boolean(invoice.status && (invoice.status === expectedStatus || ['logged', 'approved', 'paid'].includes(invoice.status)));
+      checks.push({
+        what: 'Invoice Status',
+        expected: expectedStatus,
+        actual: invoice.status || 'unknown',
+        pass: statusMatches
+      });
 
       const allPassed = checks.every(c => c.pass);
       notes = allPassed
