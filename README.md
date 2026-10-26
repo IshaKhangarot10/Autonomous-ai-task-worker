@@ -1,10 +1,6 @@
 # CentrAlign AI — Autonomous AI Task Worker
 
 An autonomous, full-stack AI task worker built for the CentrAlign internship assignment. The agent receives high-level natural language instructions, inspects sandboxed documents (text and PDF), plans execution steps, interacts with internal enterprise web portals via dynamic DOM observation without hardcoded selectors, recovers from operational chaos, and independently verifies outcome completion against ground-truth database records.
-
-### Built with
-> Code was written with AI coding assistance (Google Antigravity). I reviewed, ran and debugged the system end to end.
-
 ---
 
 ## Overview
@@ -27,7 +23,7 @@ CentrAlign Autonomous Task Worker is an agentic automation system designed to ex
 
 ```mermaid
 graph TD
-    User([Human Supervisor]) -->|Tasks / Approvals| Dashboard[Next.js Dashboard :3000]
+    User -->|Tasks / Approvals| Dashboard[Next.js Dashboard :3000]
     User -->|Terminal CLI| CLI[Node CLI Runner]
 
     Dashboard <-->|REST + SSE Live Stream| Server[Agent Express Server :4001]
